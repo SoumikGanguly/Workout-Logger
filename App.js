@@ -69,6 +69,10 @@ const CurrentSession = () => {
   );
 };
 
+const print = () => {
+  console.log("Profile");
+};
+
 export default function App() {
   return (
     <NavigationContainer>
@@ -77,12 +81,7 @@ export default function App() {
           tabBarStyle: { backgroundColor: "#202A33" },
           tabBarShowLabel: false,
           headerRight: () => (
-            <Pressable
-              onPress={() => {
-                console.log("profile");
-              }}
-              style={{ marginRight: 8 }}
-            >
+            <Pressable onPress={() => print()} style={{ marginRight: 8 }}>
               <Image
                 style={{ width: 30, height: 30, marginRight: 7 }}
                 source={require("./assets/nav-icons/woman.png")}
